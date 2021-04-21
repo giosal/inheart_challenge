@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="giosal.ge" uploadOnCheckin="6a05c73e-d844-4942-a6a1-856ff80fc8b1" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="giosal.ge" uploadOnCheckin="fd499f24-9c7a-4b07-82ee-ead548d218e7" autoUploadExternalChanges="true">
     <serverData>
       <paths name="giosal.ge">
         <serverdata>
@@ -17,7 +17,7 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="lxplus" />
+    <option name="myUploadOnCheckinName" value="giosal.ge" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

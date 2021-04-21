@@ -76,7 +76,6 @@
         getPatients();
     }
     $(function() {
-        console.log('false');
         $( "#addpatient" ).dialog({
             maxwidth: 600,
             maxheight: 600,
@@ -88,12 +87,10 @@
     });
 
     $("#newpatient").click(function(){
-        console.log("click");
         $( "#addpatient" ).dialog('open');
     });
 
     $(function() {
-        console.log('false');
         $( "#editpatient" ).dialog({
             maxwidth: 600,
             maxheight: 600,
@@ -110,8 +107,6 @@
     }
     $(document).on('click', ".flex a", function(e){
         e.preventDefault();
-        console.log("click");
-        console.log(i);
 
         $( "#editpatient" ).dialog('open');
 
@@ -135,6 +130,9 @@
             },
             success: function() {
                 $("#addpatient").dialog("close");
+                $("#patientdata").each(function() {
+                    this.reset();
+                })
                 getPatients();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -146,7 +144,6 @@
     $('#editpatientdata').submit(function(e){
         e.preventDefault();
         var eid = $("#editnewid").text();
-        console.log("eid: " + eid);
         var name = $("#editnewname").val();
         var dob = $("#editnewdob").val().toString();
         var age = moment().diff(dob, 'years');
@@ -161,6 +158,9 @@
             },
             success: function() {
                 $("#editpatient").dialog("close");
+                $("#editpatientdata").each(function() {
+                    this.reset();
+                });
                 getPatients();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
