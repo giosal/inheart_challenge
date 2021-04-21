@@ -38,8 +38,7 @@
 </div>
 <div id="editpatient" class="dialog">
     <form id="editpatientdata">
-        <label for="editnewid">ID</label>
-        <label id="editnewid"></label>
+        <label for="editnewid">ID</label><label id="editnewid"></label>
         <label for="editnewname">Full Name</label><br/>
         <input id="editnewname" type="textfield" required><br/>
         <label for="editnewdob">Date of birth</label><br/>
@@ -99,7 +98,7 @@
             maxwidth: 600,
             maxheight: 600,
             width: 300,
-            height: 300,
+            height: 400,
             autoOpen: false,
             title: 'Edit a patient'
         });
@@ -118,7 +117,7 @@
 
         $("#editnewid").html(i);
         $("#editnewname").val($("#name" + i).html());
-        $("#editnewdob").val($("#dob" + i).html().substring());
+        $("#editnewdob").val($("#dob" + i).html());
     });
 
     $('#patientdata').submit(function(e){
@@ -146,7 +145,8 @@
 
     $('#editpatientdata').submit(function(e){
         e.preventDefault();
-        var eid = $("#editnewid").val();
+        var eid = $("#editnewid").text();
+        console.log("eid: " + eid);
         var name = $("#editnewname").val();
         var dob = $("#editnewdob").val().toString();
         var age = moment().diff(dob, 'years');

@@ -24,6 +24,6 @@ $new_key = "patient" . $newid;
 $patients_file->$new_key = $new_patient;
 #array_push($patients_file, $result);
 #print_r($patients_file);
-print_r(file_put_contents("../data/data.txt", json_encode($patients_file)));
+echo file_put_contents("../data/data.txt", json_encode($patients_file)) or print_r(error_get_last());
 #print_r(file_get_contents("../data/data.txt"));
 ?>

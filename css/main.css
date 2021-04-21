@@ -35,6 +35,10 @@ body {
     background: #448bff;
 }
 
+.dialog {
+    display: none;
+}
+
 label, input { display:block; margin-bottom:0.1%; width:95%;}
 fieldset { padding:0; border:0; margin-top:25px; }
 
