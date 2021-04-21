@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="lxplus.cern.ch" id="6b3c311f-3374-419e-ac75-1b27d06a3d27" port="22" nameFormat="DESCRIPTIVE" username="giosal" />
+    </configs>
+  </component>
+</project>

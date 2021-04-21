@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="giosal.ge" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="giosal.ge">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/inheart" local="$PROJECT_DIR$" web="/inheart" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lxplus">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/inheart" local="$PROJECT_DIR$" web="/inheart" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

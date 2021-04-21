@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fd499f24-9c7a-4b07-82ee-ead548d218e7" name="giosal.ge" url="https://giosal.ge">
+        <fileTransfer host="ftp.giosal.ge" port="21">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="6a05c73e-d844-4942-a6a1-856ff80fc8b1" name="lxplus" url="https://cern.ch/dune-pbs-id-gen/">
+        <fileTransfer rootFolder="/eos/project/p/pbs-id-gen/www" accessType="SFTP" host="lxplus.cern.ch" port="22" sshConfigId="6b3c311f-3374-419e-ac75-1b27d06a3d27" sshConfig="giosal@lxplus.cern.ch:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

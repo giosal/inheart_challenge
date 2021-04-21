@@ -1,0 +1,20 @@
+{
+    "patient0": {
+        "ID": 0,
+        "name": "John Smith",
+        "age": 30,
+        "date of birth": "1990-07-02"
+    },
+    "patient1": {
+        "ID": 1,
+        "name": "Jane Doe",
+        "age": 20,
+        "date of birth": "2000-07-02"
+    },
+    "patient2": {
+        "ID": 2,
+        "name": "Samantha Smith",
+        "age": 45,
+        "date of birth": "1975-07-02"
+    }
+}
