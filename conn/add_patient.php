@@ -1,6 +1,7 @@
 <?php
 
 $name = $_POST["name"];
+$lastname = $_POST["lastname"];
 $age = $_POST["age"];
 $dob = $_POST["dob"];
 
@@ -9,6 +10,7 @@ end($patients_file);
 $last_key = key($patients_file);
 $id = "ID";
 $oldname = "name";
+$oldlastname = "lastname";
 $oldage = "age";
 $olddob = "date of birth";
 $last_id = $patients_file->$last_key->$id;
@@ -17,6 +19,7 @@ $newid = $last_id + 1;
 $new_patient = (object) array();
 $new_patient->$id = $newid;
 $new_patient->$oldname = $name;
+$new_patient->$oldlastname = $lastname;
 $new_patient->$oldage = $age;
 $new_patient->$olddob = $dob;
 $new_key = "patient" . $newid;

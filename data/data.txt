@@ -1,1 +1,1 @@
-{"patient1":{"ID":"1","name":"Natalia Batseko","age":"28","date of birth":"1992-07-03"},"patient2":{"ID":"2","name":"George Salukvadze","age":"30","date of birth":"1990-07-02"}}
+{"patient1":{"ID":"1","name":"Natalia","lastname":"Batseko","age":"28","date of birth":"1992-07-03"},"patient2":{"ID":"2","name":"George","lastname":"Salukvadze","age":"30","date of birth":"1990-07-02"}}

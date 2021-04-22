@@ -29,8 +29,10 @@
 </div>
 <div id="addpatient" class="dialog">
     <form id="patientdata">
-        <label for="newname">Full Name</label><br/>
+        <label for="newname">First Name</label><br/>
         <input id="newname" class="form-control" type="textfield" value="" required><br/>
+        <label for="newlastname">Last Name</label><br/>
+        <input id="newlastname" class="form-control" type="textfield" value="" required><br/>
         <label for="newdob">Date of birth</label><br/>
         <input id="newdob" type="date" required><br/>
         <button id="addsubmit">Submit</button>
@@ -39,8 +41,10 @@
 <div id="editpatient" class="dialog">
     <form id="editpatientdata">
         <label for="editnewid">ID</label><label id="editnewid"></label>
-        <label for="editnewname">Full Name</label><br/>
+        <label for="editnewname">First Name</label><br/>
         <input id="editnewname" type="textfield" required><br/>
+        <label for="editlastname">Last Name</label><br/>
+        <input id="editlastname" class="form-control" type="textfield" value="" required><br/>
         <label for="editnewdob">Date of birth</label><br/>
         <input id="editnewdob" type="date" required><br/>
         <button id="editsubmit">Submit</button>
@@ -57,11 +61,12 @@
             $.each(d, function (key, value) {
                 var id = value["ID"];
                 var name = value["name"];
+                var lastname = value["lastname"];
                 var age = value["age"];
                 var dob = value["date of birth"];
                 patientlist.append("<div class='list-item' id='patient" + id + "' data-id='" + id + "'>\n" +
                     "                        <div><a id='a" + id + "' data-abc='true'><span class='w-48 avatar gd-warning'>" + name.substring(0, 1) + "</span></a></div>\n" +
-                    "                        <div class='flex mr-auto'> <a href='#' class='item-author text-color' data-abc='true' onclick='sendID(" + id + ")'><span id='name" + id + "'>" + name + "</span></a>\n" +
+                    "                        <div class='flex mr-auto'> <a href='#' class='item-author text-color' data-abc='true' onclick='sendID(" + id + ")'><span id='name" + id + "'>" + name + "</span> <span id='lastname" + id + "'>" + lastname + "</span></a>\n" +
                     "                            <div class='item-except text-muted text-sm h-1x'><span id='age" + id + "'>Age: " + age + "</span> <span>Date of birth: </span><span id='dob" + id + "'>" + dob + "</span></div>\n" +
                     "                        </div>\n" +
                     "                        <div class='no-wrap'>\n" +
@@ -80,7 +85,7 @@
             maxwidth: 600,
             maxheight: 600,
             width: 300,
-            height: 300,
+            height: 400,
             autoOpen: false,
             title: 'Add a new patient'
         });
@@ -95,7 +100,7 @@
             maxwidth: 600,
             maxheight: 600,
             width: 300,
-            height: 400,
+            height: 500,
             autoOpen: false,
             title: 'Edit a patient'
         });
@@ -112,12 +117,14 @@
 
         $("#editnewid").html(i);
         $("#editnewname").val($("#name" + i).html());
+        $("#editnewlastname").val($("#lastname" + i).html());
         $("#editnewdob").val($("#dob" + i).html());
     });
 
     $('#patientdata').submit(function(e){
         e.preventDefault();
         var name = $("#newname").val();
+        var lastname = $("#newlastname").val();
         var dob = $("#newdob").val().toString();
         var age = moment().diff(dob, 'years');
         $.ajax({
@@ -125,6 +132,7 @@
             type: 'POST',
             data: {
                 "name": name,
+                "lastname": lastname,
                 "age": age,
                 "dob": dob
             },
@@ -145,6 +153,7 @@
         e.preventDefault();
         var eid = $("#editnewid").text();
         var name = $("#editnewname").val();
+        var lastname = $("#editnewlastname").val();
         var dob = $("#editnewdob").val().toString();
         var age = moment().diff(dob, 'years');
         $.ajax({
@@ -153,6 +162,7 @@
             data: {
                 "id": eid,
                 "name": name,
+                "lastname": lastname,
                 "age": age,
                 "dob": dob
             },
